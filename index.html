@@ -15,10 +15,12 @@
 
 <body>
     <div class="big-image-part">
-        <div class="logo">
-            <img src="/images/odin-lined.png" alt="">
-            <h1>Odin</h1>
-        </div>
+        <a href="https://www.theodinproject.com/">
+            <div class="logo">
+                <img src="/images/odin-lined.png" alt="">
+                <h1>Odin</h1>
+            </div>
+        </a>
         <div class=credits>
             <p> Photo by <a
                     href="https://unsplash.com/@davehoefler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dave
@@ -33,24 +35,27 @@
             <p> </p>
         </div>
         <div class=" form-container">
-            <form action="">
+            <form id="form" action="">
                 <h2> This is completely invalid form:</h2>
                 <div class="column1">
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="write your firstname here">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="mail" name="mail" placeholder="write your e-mail here">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="write your password here">
+                    <label for="fname">First name:*</label>
+                    <input type="text" id="fname" name="fname" placeholder="write your firstname here" required>
+                    <label for="email">E-mail:*</label>
+                    <input type="email" id="mail" name="mail" placeholder="write your e-mail here" required>
+                    <label for="password">Password:* (at least 8 characters)</label>
+                    <input type="password" id="password" name="password" placeholder="write your password here"
+                        minlength="8" required>
+                    <p class="note">* All fields required</p>
                 </div>
                 <div class="column2">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="write your  name here">
-                    <label for="phone">Phone:</label>
-                    <input type="number" id="phone" name="phone" placeholder="write your phone number here">
-                    <label for="doublepassword">Reenter password:</label>
+                    <label for="name">Name:*</label>
+                    <input type="text" id="name" name="name" placeholder="write your  name here" required>
+                    <label for="phone">Phone:*</label>
+                    <input type="number" id="phone" name="phone" placeholder="write your phone number here"
+                        min="100000" max="99999999999" required>
+                    <label for="doublepassword">Reenter password:* <span></span></label>
                     <input type="password" id="doublepassword" name="doublepassword"
-                        placeholder="rewrite your password here">
+                        placeholder="rewrite your password here" required>
                     <div class="buttons">
                         <button type="submit" form="form" value="Submit">Submit</button>
                         <button type="reset" form="form" value="Reset">Reset</button>

@@ -18,6 +18,7 @@ body {
 	max-width: 1000px;
 	height: 100vh;
 	margin: auto;
+	color: #505050;
 }
 
 .big-image-part {
@@ -93,10 +94,7 @@ body {
 	height: 50%;
 	padding: 1rem;
 	margin: 0rem;
-
-	background-color: #a8c7e4;
-	background-size: cover;
-	box-shadow: 0px 0px 5px #33729f;
+	box-shadow: 0px 0px 1px #33729f;
 }
 
 .one {
@@ -124,7 +122,10 @@ input {
 	padding: 0.5rem;
 	width: 100%;
 	line-height: 1.5rem;
-	box-shadow: inset 0 0px 1px #33729f;
+	height: 2rem;
+	color: #505050;
+
+	/* font-style:italic */
 }
 
 label {
@@ -143,7 +144,8 @@ input[type='number'] {
 	appearance: textfield;
 }
 
-input:focus {
+input:focus,
+button:focus {
 	background-color: rgba(250, 250, 250, 0.5);
 	background-color: none;
 	outline: none;
@@ -162,17 +164,26 @@ input:focus {
 	width: 40%;
 }
 
-.buttons {
-padding: 1rem 1rem 1rem 0;
-margin: 1rem 1rem 1rem 0;
-
+.buttons,
+.note {
+	padding: 1rem 1rem 1rem 0;
+	margin: 1rem 1rem 1rem 0;
+	text-align: left;
+}
+.note {
+	font-size: 0.6rem;
 }
 
 button {
-	padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 	border-radius: 0;
 	background: none;
 	border: 2px solid white;
-	color: rgb(80, 80, 80);
+	color: #505050;
 	cursor: pointer;
+}
+
+span {
+	background: red;
+	color: white;
 }
