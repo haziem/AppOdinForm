@@ -2,180 +2,196 @@
 	src: url('fonts/Norse-Bold.otf') format('opentype');
 	font-family: 'Norse';
 }
-/* RESET START */
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+* {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-	scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-	text-rendering: optimizeSpeed;
-	min-height: 100vh;
-	line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-	text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-	display: block;
-	max-width: 100%;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-:root {
-	font-size: 62.5%;
 }
 
 html {
-	font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	background-image: linear-gradient(#159bee, #b4d9f3, #286695);
 }
-
-/* RESET END */
 
 body {
-	background-color: #caf1ff;
-	font-size: 1.5rem;
+	position: relative;
+	max-width: 1000px;
+	height: 100vh;
+	margin: auto;
+	color: #505050;
+	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
 }
-.main-container {
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	margin: 0;
-	padding: 0;
-	font-size: 1.5rem;
+
+.big-image-part {
+	position: absolute;
+	left: 0;
+	width: 40%;
+	height: 100%;
+	background-image: url(./images/dave-hoefler-ELXbHhzVFO0-unsplash.jpg);
+	background-size: cover;
+	font-family: 'Norse';
+}
+
+.form-part {
+	font-family: Montserrat, Verdana, Tahoma, Arial, sans-serif;
+	font-weight: 300;
+	box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	right: 0;
+	width: 64%;
+	height: 100%;
+	padding: 3rem;
+	background-color: #f1f1f1;
+	background-image: url(./images/dave-hoefler-ELXbHhzVFO0-unsplash.jpg);
+	background-size: cover;
 }
 
 .logo {
-	display: flex;
-	align-items: center;
-	padding: 1rem;
+	transform-origin: top left;
+	position: absolute;
+	top: 20%;
+	transform: rotate(10deg);
+	width: 110%;
+	height: 6rem;
+	text-align: center;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(11, 73, 230, 0.2) 70%, rgba(255, 255, 255, 0));
 }
 
 .logo img {
-	width: 5rem;
-	height: auto;
-	margin-right: 2rem;
+	transform-origin: right bottom;
+	display: inline-block;
+	transform: rotate(-10deg);
+	width: auto;
+	height: 90%;
+}
+.logo h1 {
+	transform-origin: left bottom;
+	display: inline-block;
+	transform: rotate(-10deg);
+	font-size: 3rem;
+	color: #fff;
 }
 
-.main-nav {
-	grid-row: 1/3;
-	grid-column: 1/2;
-	background-color: lightgreen;
+.credits {
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 0.8rem;
+	color: #fff;
 }
 
-.header {
-	display: grid;
-	grid-template-columns: 3;
-	grid-row: 1/2;
-	grid-column: 2/4;
-	background-color: rgb(111, 164, 164);
-}
-.header img {
-	border: 3px solid blue;
-	border-radius: 50%;
-}
-.header-up,
-.header-bottom,
-.avatar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.credits a:visited,
+.credits a:link {
+	color: #fff;
 }
 
-.header-up img {
-	width: 3rem;
-	margin: auto;
-}
-.header-bottom img {
-	width: 5rem;
-}
-
-.main-area-left {
-	grid-row: 2/3;
-	grid-column: 2/3;
-	background-color: yellow;
+.form-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 90%;
+	height: 50%;
+	padding: 1rem;
+	margin: 0rem;
+	box-shadow: 0px 0px 1px #33729f;
 }
 
-.main-area-right {
-	grid-row: 2/3;
-	grid-column: 3/4;
-	background-color: pink;
+.one {
+	position: absolute;
+	top: 15%;
+	left: calc(5%+1rem);
 }
 
-nav,
-div,
-ul {
-	/* padding: 1rem; */
-	border: 1px solid red;
+.two {
+	position: absolute;
+	bottom: 15%;
+	left: calc(5%+1rem);
+}
+h2 {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+input,
+label {
+	border: none;
+	width: 100%;
 }
 
-li {
-	list-style-type: none;
-}
-.projects {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1rem;
+input {
+	padding: 0.5rem;
+	width: 100%;
+	line-height: 1.5rem;
+	height: 2rem;
+	color: #505050;
 
-}
-
-.project {
-	min-width: 20vw;
-	aspect-ratio: 16/9;
-	background: rgb(18, 210, 95);
-	font-size: 1.25rem;
+	/* font-style:italic */
 }
 
-.search,
-.person-data {
-	display: flex;
-	align-items: center;
+label {
+	font-size: 0.6rem;
+	font-weight: normal;
 }
 
-.search {
-	justify-content: start;
+input:placeholder-shown {
+	padding: 0.3rem;
+	text-align: right;
+	color: grey;
+	font-size: 0.6rem;
+	font-weight: 100;
+}
+input[type='number'] {
+	appearance: textfield;
 }
 
-.person-data {
-	justify-content: center;
+input:focus,
+button:focus {
+	background-color: rgba(250, 250, 250, 0.5);
+	background-color: none;
+	outline: none;
+}
+
+.column1 {
+	position: absolute;
+	top: 4rem;
+	left: 1rem;
+	width: 40%;
+}
+.column2 {
+	top: 4rem;
+	left: 50%;
+	position: absolute;
+	width: 40%;
+}
+
+.buttons,
+.note {
+	padding: 1rem 1rem 1rem 0;
+	margin: 1rem 1rem 1rem 0;
+	text-align: left;
+}
+.note {
+	font-size: 0.6rem;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	border-radius: 0;
+	background: none;
+	border: 2px solid white;
+	color: #505050;
+	cursor: pointer;
+}
+
+span {
+	background: red;
+	color: white;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
