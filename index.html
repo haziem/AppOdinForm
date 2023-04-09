@@ -5,79 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up Form Odin Project</title>
+    <title>Project: Admin Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d60a852eb7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="big-image-part">
-        <a href="https://www.theodinproject.com/">
-            <div class="logo">
-                <img src="images/odin-lined.png" alt="">
-                <h1>Odin</h1>
+    <div class="main-container">
+        <div class="main-nav">
+            <div class="logo"> <img src="images/logo.webp" alt="logo">
+                <h1>Dashboard</h1>
             </div>
-        </a>
-        <div class=credits>
-            <p> Photo by <a
-                    href="https://unsplash.com/@davehoefler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dave
-                    Hoefler</a> on <a
-                    href="https://unsplash.com/s/photos/blue-sky?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </p>
+            <nav>
+                <ul class="nav1">
+
+                    <li>Home</li>
+                    <li>Profile</li>
+                    <li>Messages</li>
+                    <li>History</li>
+                    <li>Tasks</li>
+                    <li>Communities</li>
+                </ul>
+                <ul class="nav2">
+                    <li>Settings</li>
+                    <li>Support</li>
+                    <li>Privacy</li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div class="form-part">
-        <div class="paragraph one">
-            <p>Just fill and make your dreams true... </p>
-            <p> </p>
-        </div>
-        <div class=" form-container">
-            <form id="form" action="">
-                <h2> This is completely invalid form:</h2>
-                <div class="column1">
-                    <label for="fname">First name:*</label>
-                    <input type="text" id="fname" name="fname" placeholder="write your firstname here" required>
-                    <label for="email">E-mail:*</label>
-                    <input type="email" id="mail" name="mail" placeholder="write your e-mail here" required>
-                    <label for="password">Password:* (at least 8 characters)</label>
-                    <input type="password" id="password" name="password" placeholder="write your password here"
-                        minlength="8" required>
-                    <p class="note">* All fields required</p>
+        <div class="header">
+            <div class="header-up">
+                <div class="search">
+
+                    <form action=""><label for="name"> <i class="fa-solid fa-magnifying-glass"></i></label><input
+                            type="text" name="search"></form>
                 </div>
-                <div class="column2">
-                    <label for="name">Name:*</label>
-                    <input type="text" id="name" name="name" placeholder="write your  name here" required>
-                    <label for="phone">Phone:*</label>
-                    <input type="number" id="phone" name="phone" placeholder="write your phone number here" min="100000"
-                        max="99999999999" required>
-                    <label for="doublepassword">Reenter password:* <span></span></label>
-                    <input type="password" id="doublepassword" name="doublepassword"
-                        placeholder="rewrite your password here" required>
-                    <div class="buttons">
-                        <button type="submit" form="form" value="Submit">Submit</button>
-                        <button type="reset" form="form" value="Reset">Reset</button>
+                <div class="person-data">
+                    <i class="fa-regular fa-bell"></i>
+                    <img src="images/baldur.webp" alt="avatar">
+                    <h3>Dauði Baldrs</h3>
+                </div>
+
+            </div>
+            <div class="header-bottom">
+                <div class="avatar">
+                    <img src="images/baldur.webp" alt="avatar">
+                    <div class="person-greeting">
+                        <p>Hi there,</p>
+                        <h3>Dauði Baldrs</h3>
                     </div>
                 </div>
 
-            </form>
+                <div class="buttons">
+                    <button type="button"><i class="fa-solid fa-plus"></i> New</button>
+                    <button type="button"><i class="fa-solid fa-upload"></i> Upload</button>
+                    <button type="button"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-area-left">
+            <h3>Your Projects</h3>
+            <div class="projects">
+                <div class="project">
+                    <h4>Project title</h4>
+                    <p>Project description. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere quasi in molestiae! Unde excepturi beatae, aliquid voluptates voluptate in dolores fuga eum perspiciatis recusandae facilis eligendi blanditiis quam nisi maiores.</p>
+                    <div class="project-icons"><i class="fa-solid fa-heart-circle-plus"></i><i class="fa-solid fa-share-nodes"></i> </div>
+                </div>
+                <div class="project"></div>
+                <div class="project"></div>
+                <div class="project"></div>
+               <div class="project"></div>
+                <div class="project"></div>
+            </div>
 
         </div>
+        <div class="main-area-right">
+            <div class="announcements">
 
+            <h3>Announcements</h3>
+        </div>
+        <div class="trending">
 
+            <h3>Trending</h3>
+        </div>
 
-        <div class="paragraph two">
-            <p ">Ok, maybe not this time ;)</p>
-            </div>
+        </div>
     </div>
-  
-
-    </div>
-
-
-
 </body>
 
 
